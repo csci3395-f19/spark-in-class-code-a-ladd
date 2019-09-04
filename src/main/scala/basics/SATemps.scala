@@ -10,7 +10,7 @@ def parseLine(line: String): TempRow = {
 }
 
 def main(args: Array[String]): Unit = {
-    val source = scala.io.Source.fromFile("/users/mlewis/CSCI3395-F19/InClassDB/SanAntonioTemps.csv");
+    val source = scala.io.Source.fromFile("data/SanAntonioTemps.csv");
     val lines = source.getLines();
     val data = lines.drop(2).map(parseLine).toArray;
 
@@ -22,7 +22,7 @@ def main(args: Array[String]): Unit = {
 
     val mostRain = data.maxBy(_.precip);
 
-
+    println(mostRain);
 }
 
 }
